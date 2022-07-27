@@ -1,5 +1,7 @@
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS reset_codes;
+DROP TABLE IF EXISTS products;
+
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -15,3 +17,12 @@ CREATE TABLE users (
     code VARCHAR NOT NULL,  
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   );
+
+CREATE TABLE products (
+  id SERIAL PRIMARY KEY,
+  user_id INT REFERENCES users(id) NOT NULL,
+  ordered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  name VARCHAR,
+  price VARCHAR NOT NULL,
+  imgurl VARCHAR
+);

@@ -53,3 +53,11 @@ RETURNING * ;`,
         [password, email]
     );
 };
+
+module.exports.getmatchingproducts = (val) => {
+    return db.query(
+        `SELECT * FROM products
+    WHERE first ILIKE $1;`,
+        [val + "%"]
+    );
+};

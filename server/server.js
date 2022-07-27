@@ -177,6 +177,25 @@ app.get("/logout", (req, res) => {
     res.redirect("/");
 });
 
+app.get("/findproducts", (req, res) => {
+    console.log("req.query",req.query.userSearch
+        )
+    if (req.query.userSearch) {
+        db.getmatchingproducts(req.query.productSearch)
+            .then((result) => {
+                console.log("/findproducts route has been hit");
+                console.log(result.rows, "result in rows");
+                const data = result.rows;
+                res.json({ data });
+            })
+            .catch((err) => {
+                console.log("err in get matching products", err);
+            });
+    } 
+
+});
+
+
 app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "..", "client", "index.html"));
 });
