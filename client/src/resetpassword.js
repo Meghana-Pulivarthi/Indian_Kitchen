@@ -83,7 +83,11 @@ export default class Reset extends Component {
         // this method determines what the render!
         if (this.state.view === 1) {
             return (
-                <div>
+                <div id="view1">
+                    <br></br>
+                    <br></br>
+                    <p>Enter your registered email.</p>
+                    <br></br>
                     <input
                         type="email"
                         name="email"
@@ -98,6 +102,11 @@ export default class Reset extends Component {
         } else if (this.state.view === 2) {
             return (
                 <div id="reset_pwd">
+                    <br></br>
+                    <br></br>
+                    <p>Enter your new password and code.</p>
+                    <br></br>
+
                     <input
                         type="password"
                         name="password"
@@ -119,11 +128,11 @@ export default class Reset extends Component {
         } else if (this.state.view === 3) {
             // remember to also add a link to login ;)
             return (
-                <div>
-                    <h1>Password reset successful.</h1>
-                    <p>
+                <div id="view3">
+                    <br></br>
+                    <p>Password reset successful.
                         Login with your new password.
-                        <Link to="/login">Click here to Log in!</Link>;
+                        <Link to="/login">Click here to Log in.</Link>
                     </p>
                 </div>
             );

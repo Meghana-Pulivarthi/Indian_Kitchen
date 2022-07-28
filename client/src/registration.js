@@ -96,7 +96,7 @@ export default class Registration extends Component {
                 </button>
                 <p>
                     Already a memember?
-                    <Link to="/login">Click here to Log in!</Link>;
+                    <Link to="/login">Click here to Log in.</Link>
                 </p>
             </div>
         );

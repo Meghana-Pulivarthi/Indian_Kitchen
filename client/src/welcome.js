@@ -7,10 +7,12 @@ import Reset from "./resetpassword";
 export default function Welcome() {
     return (
         <div>
-            {/* <header>
-                <img id="logomain" src="/logo.jpg" alt="logo" />
-            </header> */}
-            <h2 id="intro">Welcome to The Great Indian Kitchen</h2>
+            <header className="headerWelcome">
+                <img id="loginlogo" src="./logo.jpg" alt="logo"></img>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+
+                <h2 id="intro">The Great Indian Kitchen</h2>
+            </header>
 
             <BrowserRouter>
                 <div>
@@ -25,6 +27,11 @@ export default function Welcome() {
                     </Route>
                 </div>
             </BrowserRouter>
+            <footer className="footerWelcome">
+                <p>
+                    © Copyright  2022 by Meghana Pulivarthi. All Rights Reserved. 
+                </p>
+            </footer>
         </div>
     );
 }

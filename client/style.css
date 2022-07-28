@@ -1,5 +1,6 @@
 body {
     background-color: white;
+    height: 100%;
 }
 
 * {
@@ -11,20 +12,19 @@ body {
 #register,
 #login,
 #reset_pwd {
-    /* Size & position */
-    width: 300px;
+    width: 600px;
+    height: 200px;
     margin: 60px auto 30px;
     padding: 10px;
-    position: relative; /* For the submit button positioning */
-
-    /* Styles */
+    position: relative; 
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.3),
         inset 0 1px rgb(255, 255, 255), inset 0 -3px 2px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     background: linear-gradient(#eeefef, #ffffff 10%);
 }
 
-#logo {
+#logo,
+#loginlogo {
     border-radius: 50%;
 }
 .header {
@@ -141,6 +141,46 @@ body {
     transform: translateY(2px);
 }
 
-#aboutclick{
+#aboutclick {
     text-align: center;
+}
+
+.headerWelcome {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    min-height: 80px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: orange;
+}
+
+/* #intro {
+    text-align: center;
+    padding: 10px;
+} */
+
+#view1,
+#view3 {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.footerWelcome {
+     text-align: center;
+    position: sticky;
+   bottom:0;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden;
+    background-color: orange; 
+    font-family: Arial, Helvetica, sans-serif;
 }

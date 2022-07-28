@@ -53,8 +53,9 @@ export default class Login extends Component {
     }
 
     render() {
+        
         return (
-            <div id="login">
+            <div id="login">    
                 <h1>Login:</h1>
                 {this.state.error && (
                     <p style={{ color: "red" }}>oops!something went wrong</p>
@@ -74,10 +75,10 @@ export default class Login extends Component {
                 <button type="submit" onClick={() => this.handleSubmit()}>
                     Submit
                 </button>
-                <Link to="/">Click here to register!</Link>;
+                <Link to="/">Click here to register.</Link>
                 <p>
                     Forgot password?
-                    <Link to="/reset">Reset your password!</Link>;
+                    <Link to="/reset">Reset your password.</Link>
                 </p>
             </div>
         );
