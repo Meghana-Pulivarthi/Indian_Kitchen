@@ -15,7 +15,9 @@ export default function About() {
                 Our drinks with season's special fruits are a must try. Have a
                 tummy full shopping experience with us.
             </div>
-            <Link to="/find">Click here to continue.&nbsp;</Link>
+            <div id="aboutclick">
+                <Link to="/find">Click here to continue.&nbsp;</Link>
+            </div>
         </>
     );
 }

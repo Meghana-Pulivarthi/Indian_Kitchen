@@ -5,13 +5,11 @@ import { Link } from "react-router-dom";
 import Logo from "./logo";
 import FindProducts from "./findproducts";
 import About from "./about";
+import Productslist from "./productlist";
+import Routes from "./routes";
+import Products from "./products";
+import Cart from "./cart"
 export default class Header extends Component {
-    constructor() {
-        super();
-    }
-    componentDidMount() {
-        console.log("Header mounted");
-    }
 
     render() {
         return (

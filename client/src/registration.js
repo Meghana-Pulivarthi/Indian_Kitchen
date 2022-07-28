@@ -63,7 +63,7 @@ export default class Registration extends Component {
     render() {
         return (
             <div id="register">
-                <h1> This is a registration component</h1>
+                <h1> Register</h1>
                 {this.state.error && (
                     <p style={{ color: "red" }}>oops!something went wrong</p>
                 )}

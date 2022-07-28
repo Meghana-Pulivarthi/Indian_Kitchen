@@ -195,6 +195,17 @@ app.get("/findproducts", (req, res) => {
 
 });
 
+app.get(`/products`, (req, res) => {
+    db.getProducts()
+        .then((result) => {
+            const data = result.rows;
+            res.json({ friends: data });
+        })
+        .catch((err) => {
+            console.log("err in get /friendsandwannabees", err);
+        });
+});
+
 
 app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "..", "client", "index.html"));

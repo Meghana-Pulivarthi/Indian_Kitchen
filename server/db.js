@@ -61,3 +61,7 @@ module.exports.getmatchingproducts = (val) => {
         [val + "%"]
     );
 };
+
+module.exports.getProducts = () => {
+    return db.query(`SELECT * FROM products WHERE id=$1`);
+};

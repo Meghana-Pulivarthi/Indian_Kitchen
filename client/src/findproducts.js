@@ -46,6 +46,12 @@ export default function FindProducts() {
                 value={searchInput}
             />
             <div id="findproducts">
+                {" "}
+                <BrowserRouter>
+                    <Link to="/products">
+                        <Productslist />
+                    </Link>
+                </BrowserRouter>
                 {products &&
                     products.map((products, id) => {
                         return (
@@ -56,12 +62,6 @@ export default function FindProducts() {
                                     alt={(users.first, users.last)}
                                 /> */}
                                 {products.price}
-                                <BrowserRouter>
-                                    <Link to="/products">
-                                        I am product list
-                                        <Productslist />
-                                    </Link>
-                                </BrowserRouter>
                             </div>
                         );
                     })}
