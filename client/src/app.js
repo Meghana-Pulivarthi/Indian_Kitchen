@@ -17,18 +17,18 @@ export default class App extends Component {
             ...data,
             cartItems: [],
         };
-
+console.log("data in app",data)
         console.log("tis.state in app", this.state);
+        console.log("cart items in app",this.state.cartItems)
     }
     componentDidMount() {
         console.log("App mounted");
     }
-    add() {}
     render() {
         return (
             <>
                 <BrowserRouter>
-                    <Route exact path="/">
+                    <Route path="/">
                         <Header />
                     </Route>
                     <Switch>
@@ -38,9 +38,9 @@ export default class App extends Component {
                         <Route path="/find">
                             <Productslist />
                         </Route>
-                        <Route path="/login">
+                        {/* <Route path="/login">
                             <Header />
-                        </Route>
+                        </Route> */}
                         <Route path="/cart">
                             <Cart cartItems={this.state.cartItems} />
                         </Route>

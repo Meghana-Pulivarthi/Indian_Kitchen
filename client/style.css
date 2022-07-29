@@ -40,10 +40,14 @@ body {
     background-color: orange;
 }
 
-.linksinheader {
+/* .linksinheader {
     display: flex;
+} */
+.mainheading{
+     font-weight: 700;
+    font-size: 25px;
+   
 }
-
 .linksinheader {
     list-style: none;
     display: inline-block;
@@ -278,19 +282,18 @@ body {
     border: 2px solid black;
 }
 
-.totalprice{
+.totalprice {
     display: flex;
     padding-left: 45%;
-
 }
 
-.clearcart{
+.clearcart {
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
     margin-right: 10px;
 }
-.clearbtn{
+.clearbtn {
     border: none;
     border-radius: 5px;
     background: red;
@@ -300,6 +303,6 @@ body {
     color: #eeefef;
     cursor: pointer;
 }
-.clearbtn:hover{
+.clearbtn:hover {
     background-color: green;
 }

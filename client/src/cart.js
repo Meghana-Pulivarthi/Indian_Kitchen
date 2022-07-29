@@ -4,14 +4,16 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Productslist from "./productlist";
 import Routes from "./routes";
 import App from "./app";
-const Cart = ({
-    cartItems,
-    handleAddProduct,
-    handleRemoveProduct,
-    handlecartclearance,
-}) => {
+const Cart = (props) => {
+    const {
+        cartItems,
+        handleAddProduct,
+        handleRemoveProduct,
+        handlecartclearance,
+    } = props;
+    console.log("props cart", props);
     console.log("cart items in cart", cartItems);
-
+    console.log("handleaddproducts yyy", handleAddProduct);
     const totalPrice = cartItems.reduce(
         (price, item) => price + item.quantity * item.price,
         0
@@ -19,8 +21,10 @@ const Cart = ({
     return (
         <>
             <div className="clearcart">
-                {cartItems?.length >=1 && (
-                    <button className="clearbtn" onClick={handlecartclearance}>Clear Cart</button>
+                {cartItems?.length >= 1 && (
+                    <button className="clearbtn" onClick={handlecartclearance}>
+                        Clear Cart
+                    </button>
                 )}
             </div>
             <div className="cartitemheader">Your Cart </div>
@@ -51,7 +55,7 @@ const Cart = ({
                                 </button>
                             </div>
                             <div className="cartitemprice">
-                                {item.quantity}*{item.price} €
+                                {item.quantity * item.price} €
                             </div>
                         </div>
                     );

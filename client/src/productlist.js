@@ -43,17 +43,19 @@ const Productslist = () => {
             );
         }
     };
-    const handlecartclearance=() =>{
-        setCartItems([])
-    }
+    const handlecartclearance = () => {
+        setCartItems([]);
+        console.log("handle cart clear");
+    };
+
     console.log("data in product list", data);
     console.log("productItems in product list", productItems);
     console.log("cart items in productlist", cartItems);
     return (
         <div>
-            <Router>
+            {/* <Router>
                 <Header />
-            </Router>
+            </Router> */}
             <Router>
                 <Routes
                     productItems={productItems}
@@ -63,9 +65,12 @@ const Productslist = () => {
                     handlecartclearance={handlecartclearance}
                 />
             </Router>
-            <Route path="/cart">
-                <Cart cartItems={cartItems} />
-            </Route>
+            <Cart
+                cartItems={cartItems}
+                handleAddProduct={handleAddProduct}
+                handleRemoveProduct={handleRemoveProduct}
+                handlecartclearance={handlecartclearance}
+            />
         </div>
     );
 };

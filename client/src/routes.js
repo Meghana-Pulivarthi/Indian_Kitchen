@@ -10,6 +10,8 @@ const Routes = ({
     handlecartclearance,
 }) => {
     // console.log("productItems in routes", productItems)
+        console.log("handleaddproducts xxx", handleAddProduct);
+
     console.log("cart items in routes", cartItems);
     return (
         <>
