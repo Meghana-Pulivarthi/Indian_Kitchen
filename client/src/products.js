@@ -24,7 +24,7 @@ const Products = ({ productItems, handleAddProduct }) => {
                             </div>
                             {/* we need a function for button */}
                             <div>
-                                <button className="add" >
+                                <button className="add"  onClick={()=>handleAddProduct(productItem)}>
                                     Add to cart
                                 </button>
                             </div>

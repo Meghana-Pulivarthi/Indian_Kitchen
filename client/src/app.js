@@ -14,15 +14,16 @@ export default class App extends Component {
     constructor() {
         super();
         this.state = {
-            cartItems:data,
+            ...data,
+            cartItems: [],
         };
+
+        console.log("tis.state in app", this.state);
     }
     componentDidMount() {
         console.log("App mounted");
     }
-add(){
-    
-}
+    add() {}
     render() {
         return (
             <>
