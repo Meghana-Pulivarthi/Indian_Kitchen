@@ -23,7 +23,7 @@ export default class Header extends Component {
                         <Link to="/about">About&nbsp;</Link>{" "}
                         <Link to="/find">Shop&nbsp;</Link>{" "}
                         <a href="/logout">Logout&nbsp;</a>{" "}
-                        <Link to="/cart">🛒&nbsp;</Link>{" "}
+                        <Link to="/payment">Payment&nbsp;</Link>{" "}
                     </div>
                     
                 </header>

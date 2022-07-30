@@ -5,6 +5,7 @@ import Header from "./header";
 import Routes from "./routes";
 import data from "./data.js";
 import Products from "./products";
+// import Payment from "./payment"
 import Cart from "./cart";
 const Productslist = () => {
     const { productItems } = data;
@@ -71,6 +72,13 @@ const Productslist = () => {
                 handleRemoveProduct={handleRemoveProduct}
                 handlecartclearance={handlecartclearance}
             />
+            <br></br>
+            {/* <Payment/> */}
+            <footer className="footerWelcome">
+                <p>
+                    © Copyright 2022 by Meghana Pulivarthi. All Rights Reserved.
+                </p>
+            </footer>
         </div>
     );
 };

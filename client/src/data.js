@@ -2,25 +2,25 @@ const data = {
     productItems: [
         {
             id: "1",
-            name: "chicken biryani",
+            name: "CHICKEN BIRYANI",
             price: "12",
             image: "/biryani.jpg",
         },
         {
             id: "2",
-            name: "dosa",
+            name: "DOSA",
             price: "7",
             image: "/dosa.jpg",
         },
         {
             id: "3",
-            name: "puttu",
+            name: "PUTTU",
             price: "10",
             image: "/puttu.jpg",
         },
         {
             id: "4",
-            name: "mysorepak",
+            name: "MYSOREPAK",
             price: "6",
             image: "/mysorepak.jpg",
         },

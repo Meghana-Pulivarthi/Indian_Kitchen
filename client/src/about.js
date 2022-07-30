@@ -16,8 +16,13 @@ export default function About() {
                 tummy full shopping experience with us.
             </div>
             <div id="aboutclick">
-                <Link to="/find">Click here to continue.&nbsp;</Link>
+                <Link to="/find">Proceed to shop.&nbsp;</Link>
             </div>
+            <footer className="footerWelcome">
+                <p>
+                    © Copyright 2022 by Meghana Pulivarthi. All Rights Reserved.
+                </p>
+            </footer>
         </>
     );
 }

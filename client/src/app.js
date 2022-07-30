@@ -9,7 +9,7 @@ import About from "./about";
 import Productslist from "./productlist";
 import Routes from "./routes";
 import Cart from "./cart";
-import Cartlist from "./cartlist";
+import Payment from "./payment";
 export default class App extends Component {
     constructor() {
         super();
@@ -17,9 +17,9 @@ export default class App extends Component {
             ...data,
             cartItems: [],
         };
-console.log("data in app",data)
-        console.log("tis.state in app", this.state);
-        console.log("cart items in app",this.state.cartItems)
+        // console.log("data in app", data);
+        // console.log("tis.state in app", this.state);
+        // console.log("cart items in app", this.state.cartItems);
     }
     componentDidMount() {
         console.log("App mounted");
@@ -38,11 +38,9 @@ console.log("data in app",data)
                         <Route path="/find">
                             <Productslist />
                         </Route>
-                        {/* <Route path="/login">
-                            <Header />
-                        </Route> */}
-                        <Route path="/cart">
-                            <Cart cartItems={this.state.cartItems} />
+                        <Route path="/payment">
+                            {/* <Cart cartItems={this.state.cartItems} /> */}
+                            <Payment />
                         </Route>
                     </Switch>
                 </BrowserRouter>
