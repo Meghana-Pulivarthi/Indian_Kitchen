@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import App from "./app";
 import FindProducts from "./findproducts";
 
-
+import Cart from "./cart"
 
 export default function About() {
     return (

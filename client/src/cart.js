@@ -5,7 +5,7 @@ import { useState } from "react";
 import Productslist from "./productlist";
 import Routes from "./routes";
 import App from "./app";
-
+import Payment from "./payment";
 const Cart = (props) => {
     const {
         cartItems,
@@ -13,39 +13,30 @@ const Cart = (props) => {
         handleRemoveProduct,
         handlecartclearance,
     } = props;
-    // console.log("props cart", props);
+    console.log("props cart", props);
     // console.log("cart items in cart", cartItems);
     // console.log("handleaddproducts yyy", handleAddProduct);
     const totalPrice = cartItems.reduce(
         (price, item) => price + item.quantity * item.price,
         0
     );
-      const [data, setData] = useState("");
+    const [data, setData] = useState("");
 
-      const payment = () => {
-          setData("This is data ");
-          data=totalPrice;
-          console.log("payment",data)
-      };
+    const payment = () => {
+        setData("This is data ");
+        data = totalPrice;
+        console.log("payment", data);
+    };
 
     return (
         <>
             {" "}
             <div className="checkout">
-                <div className="clearcart">
-                    {cartItems?.length >= 1 && (
-                        <button
-                            className="clearbtn"
-                            onClick={handlecartclearance}
-                        >
-                            Clear Cart
-                        </button>
-                    )}
-                </div>
                 <div className="cartitems">
                     {cartItems?.length === 0 && (
                         <div className="emptycart">No items in your cart</div>
                     )}
+
                     {cartItems?.map((item) => {
                         return (
                             <div className="cartlist" key={item.id}>
@@ -75,11 +66,30 @@ const Cart = (props) => {
                             </div>
                         );
                     })}
+
                     <div className="totalprice">
                         Total price&nbsp;
                         <div className="carttotal">{totalPrice} €</div>
                     </div>
-                    <button className="paybtn" onClick={() => payment()}>Pay</button>
+                </div>
+                {/* <h1>{totalPrice}</h1> 
+                     <Payment totalPrice={props.totalPrice}/> */}
+                <div className="clearcart">
+                    {cartItems?.length >= 1 && (
+                        <button
+                            className="clearbtn"
+                            onClick={handlecartclearance}
+                        >
+                            Clear Cart
+                        </button>
+                    )}
+                </div>
+                <div className="paycart">
+                    {cartItems?.length >= 1 && (
+                        <button className="paybtn" onClick={() => payment()}>
+                            Pay
+                        </button>
+                    )}
                 </div>
             </div>
         </>

@@ -49,9 +49,9 @@ const Productslist = () => {
         console.log("handle cart clear");
     };
 
-    console.log("data in product list", data);
-    console.log("productItems in product list", productItems);
-    console.log("cart items in productlist", cartItems);
+    // console.log("data in product list", data);
+    // console.log("productItems in product list", productItems);
+    // console.log("cart items in productlist", cartItems);
     return (
         <div>
             {/* <Router>
@@ -71,6 +71,7 @@ const Productslist = () => {
                 handleAddProduct={handleAddProduct}
                 handleRemoveProduct={handleRemoveProduct}
                 handlecartclearance={handlecartclearance}
+            
             />
             <br></br>
             {/* <Payment/> */}

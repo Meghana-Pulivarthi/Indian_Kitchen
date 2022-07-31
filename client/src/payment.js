@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Cart from "./cart";
 const PayPalButton = paypal.Buttons.driver("react", { React, ReactDOM });
 export default class Payment extends React.Component {
     createOrder(data, actions) {
+        // console.log("total price in cart", totalPrice);
         return actions.order.create({
             purchase_units: [
                 {
                     amount: {
-                        value: this.props.payment,
+                        value: "0.01",
                     },
                 },
             ],
@@ -20,7 +22,7 @@ export default class Payment extends React.Component {
         return (
             <div className="pay">
                 <br></br>
-                <h3 className="payinfo">Choose any of the payment options </h3>
+                <h3 className="payinfo">Choose any of the payment options {this.props.totalPrice}</h3>
                 <br></br>
                 <div className="paybtn">
                     {" "}
