@@ -4,7 +4,7 @@ export default function priceReducer(price = [], action) {
         price = action.payload.totalPrice;
         console.log("totalPrice in slice", price);
     }
-    return messages;
+    return price;
 }
 // Action Creators ---------------------------------------------
 export function priceRecieved(totalPrice) {

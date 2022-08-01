@@ -8,11 +8,12 @@ const Routes = ({
     handleAddProduct,
     handleRemoveProduct,
     handlecartclearance,
+    // handlePay
 }) => {
     // console.log("productItems in routes", productItems)
-        console.log("handleaddproducts xxx", handleAddProduct);
+        // console.log("handleaddproducts xxx", handleAddProduct);
 
-    console.log("cart items in routes", cartItems);
+    // console.log("cart items in routes", cartItems);
     return (
         <>
             <Switch>
@@ -28,6 +29,7 @@ const Routes = ({
                         handleAddProduct={handleAddProduct}
                         handleRemoveProduct={handleRemoveProduct}
                         handlecartclearance={handlecartclearance}
+                        // handlePay={handlePay}
                     />
                 </Route>
             </Switch>

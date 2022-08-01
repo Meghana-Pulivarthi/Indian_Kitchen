@@ -10,6 +10,7 @@ import Productslist from "./productlist";
 import Routes from "./routes";
 import Cart from "./cart";
 import Payment from "./payment";
+import Pay from "./pay";
 export default class App extends Component {
     constructor() {
         super();
@@ -39,7 +40,6 @@ export default class App extends Component {
                             <Productslist />
                         </Route>
                         <Route path="/payment">
-                            {/* <Cart cartItems={this.state.cartItems} /> */}
                             <Payment />
                         </Route>
                     </Switch>

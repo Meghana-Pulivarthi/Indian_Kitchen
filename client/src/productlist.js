@@ -5,7 +5,7 @@ import Header from "./header";
 import Routes from "./routes";
 import data from "./data.js";
 import Products from "./products";
-// import Payment from "./payment"
+import Payment from "./payment"
 import Cart from "./cart";
 const Productslist = () => {
     const { productItems } = data;
@@ -48,15 +48,11 @@ const Productslist = () => {
         setCartItems([]);
         console.log("handle cart clear");
     };
-
     // console.log("data in product list", data);
     // console.log("productItems in product list", productItems);
     // console.log("cart items in productlist", cartItems);
     return (
         <div>
-            {/* <Router>
-                <Header />
-            </Router> */}
             <Router>
                 <Routes
                     productItems={productItems}
@@ -71,10 +67,14 @@ const Productslist = () => {
                 handleAddProduct={handleAddProduct}
                 handleRemoveProduct={handleRemoveProduct}
                 handlecartclearance={handlecartclearance}
-            
+                //  handlePay={handlePay}
             />
+            {/* <Route path="/payment">
+                <Payment  handlePay={handlePay}
+                />
+            </Route> */}
+
             <br></br>
-            {/* <Payment/> */}
             <footer className="footerWelcome">
                 <p>
                     © Copyright 2022 by Meghana Pulivarthi. All Rights Reserved.

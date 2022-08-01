@@ -2,6 +2,7 @@ import ReactDOM from "react-dom";
 import App from "./app";
 
 import Welcome from "./welcome";
+
 fetch("/user/id.json")
     .then((response) => response.json())
     .then((data) => {

@@ -1,36 +1,32 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter , Route, Link, Switch } from "react-router-dom";
 import { useState } from "react";
-
+import { useSelector } from "react-redux";
 import Productslist from "./productlist";
 import Routes from "./routes";
 import App from "./app";
 import Payment from "./payment";
-const Cart = (props) => {
+import Pay from "./pay";
+const Cart = ({props, totalPrice}) => {
     const {
         cartItems,
         handleAddProduct,
         handleRemoveProduct,
         handlecartclearance,
     } = props;
-    console.log("props cart", props);
+
+    // console.log("props cart", props);
     // console.log("cart items in cart", cartItems);
     // console.log("handleaddproducts yyy", handleAddProduct);
-    const totalPrice = cartItems.reduce(
-        (price, item) => price + item.quantity * item.price,
-        0
-    );
-    const [data, setData] = useState("");
+    //   const [query, setQuery] = useState(cartItems);
+    totalPrice = cartItems.reduce(
+         (price, item) => price + item.quantity * item.price,
+         0
+     );
 
-    const payment = () => {
-        setData("This is data ");
-        data = totalPrice;
-        console.log("payment", data);
-    };
 
     return (
         <>
-            {" "}
             <div className="checkout">
                 <div className="cartitems">
                     {cartItems?.length === 0 && (
@@ -84,13 +80,18 @@ const Cart = (props) => {
                         </button>
                     )}
                 </div>
-                <div className="paycart">
-                    {cartItems?.length >= 1 && (
-                        <button className="paybtn" onClick={() => payment()}>
-                            Pay
-                        </button>
-                    )}
-                </div>
+                <Link to="/payment">
+                    <div className="paycart">
+                        {cartItems?.length >= 1 && (
+                            <button
+                                className="paybtn"
+                                onClick={() => handlePay("item")}
+                            >
+                                Pay
+                            </button>
+                        )}
+                    </div>
+                </Link>
             </div>
         </>
     );
