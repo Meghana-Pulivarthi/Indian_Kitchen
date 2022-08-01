@@ -17,13 +17,20 @@ export default class App extends Component {
         this.state = {
             ...data,
             cartItems: [],
+            totalPrice: 0,
         };
         // console.log("data in app", data);
         // console.log("tis.state in app", this.state);
         // console.log("cart items in app", this.state.cartItems);
+        this.setTotalPrice = this.setTotalPrice.bind(this);
     }
     componentDidMount() {
         console.log("App mounted");
+    }
+    setTotalPrice(totalPrice) {
+        this.setState({
+            totalPrice: totalPrice,
+        });
     }
     render() {
         return (
@@ -37,10 +44,10 @@ export default class App extends Component {
                             <About />
                         </Route>
                         <Route path="/find">
-                            <Productslist />
+                            <Productslist setTotalPrice={this.setTotalPrice} />
                         </Route>
                         <Route path="/payment">
-                            <Payment />
+                            <Payment totalPrice={this.state.totalPrice} />
                         </Route>
                     </Switch>
                 </BrowserRouter>

@@ -1,29 +1,32 @@
 import React from "react";
-import { BrowserRouter , Route, Link, Switch } from "react-router-dom";
-import { useState } from "react";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Productslist from "./productlist";
 import Routes from "./routes";
 import App from "./app";
 import Payment from "./payment";
 import Pay from "./pay";
-const Cart = ({props, totalPrice}) => {
+const Cart = (props) => {
     const {
         cartItems,
         handleAddProduct,
         handleRemoveProduct,
         handlecartclearance,
+        setTotalPrice,
     } = props;
 
     // console.log("props cart", props);
     // console.log("cart items in cart", cartItems);
     // console.log("handleaddproducts yyy", handleAddProduct);
     //   const [query, setQuery] = useState(cartItems);
-    totalPrice = cartItems.reduce(
-         (price, item) => price + item.quantity * item.price,
-         0
-     );
-
+    const totalPrice = cartItems.reduce(
+        (price, item) => price + item.quantity * item.price,
+        0
+    );
+    useEffect(() => {
+        setTotalPrice(totalPrice);
+    },[totalPrice]);
 
     return (
         <>
@@ -83,12 +86,7 @@ const Cart = ({props, totalPrice}) => {
                 <Link to="/payment">
                     <div className="paycart">
                         {cartItems?.length >= 1 && (
-                            <button
-                                className="paybtn"
-                                onClick={() => handlePay("item")}
-                            >
-                                Pay
-                            </button>
+                            <button className="paybtn">Pay</button>
                         )}
                     </div>
                 </Link>

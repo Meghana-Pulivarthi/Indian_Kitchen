@@ -3,10 +3,11 @@ import ReactDOM from "react-dom";
 import Cart from "./cart";
 const PayPalButton = paypal.Buttons.driver("react", { React, ReactDOM });
 export default class Payment extends React.Component {
+    
     constructor(props) { 
         super(props);
         this.state = {
-            totalPrice: `${this.props.totalPricee}`,
+            totalPrice: `${this.props.totalPrice}`,
         };
         this.createOrder = this.createOrder.bind(this);
     }
@@ -33,7 +34,7 @@ export default class Payment extends React.Component {
                 <br></br>
                 <h3 className="payinfo">
                     Choose any of the payment options totalPrice=
-                    {this.state.totalPrice}
+                    {this.props.totalPrice}
                 </h3>
                 <br></br>
                 <div className="paybutton">

@@ -5,9 +5,9 @@ import Header from "./header";
 import Routes from "./routes";
 import data from "./data.js";
 import Products from "./products";
-import Payment from "./payment"
+import Payment from "./payment";
 import Cart from "./cart";
-const Productslist = () => {
+const Productslist = ({ setTotalPrice }) => {
     const { productItems } = data;
     const [cartItems, setCartItems] = useState([]);
     const handleAddProduct = (product) => {
@@ -46,7 +46,7 @@ const Productslist = () => {
     };
     const handlecartclearance = () => {
         setCartItems([]);
-        console.log("handle cart clear");
+        // console.log("handle cart clear");
     };
     // console.log("data in product list", data);
     // console.log("productItems in product list", productItems);
@@ -67,7 +67,7 @@ const Productslist = () => {
                 handleAddProduct={handleAddProduct}
                 handleRemoveProduct={handleRemoveProduct}
                 handlecartclearance={handlecartclearance}
-                //  handlePay={handlePay}
+                setTotalPrice={setTotalPrice}
             />
             {/* <Route path="/payment">
                 <Payment  handlePay={handlePay}
