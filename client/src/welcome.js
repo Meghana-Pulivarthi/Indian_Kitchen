@@ -27,11 +27,14 @@ export default function Welcome() {
                     </Route>
                 </div>
             </BrowserRouter>
-            <footer className="footerWelcome">
-                <p>
-                    © Copyright  2022 by Meghana Pulivarthi. All Rights Reserved. 
-                </p>
-            </footer>
+            <div className="footerwel">
+                <footer className="footerWelcome">
+                    <p>
+                        © Copyright 2022 by Meghana Pulivarthi. All Rights
+                        Reserved.
+                    </p>
+                </footer>
+            </div>
         </div>
     );
 }

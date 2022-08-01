@@ -18,7 +18,7 @@ export default class Payment extends React.Component {
             purchase_units: [
                 {
                     amount: {
-                        value: this.state.totalPrice,
+                        value: `${this.state.totalPrice}`,
                     },
                 },
             ],
@@ -30,31 +30,38 @@ export default class Payment extends React.Component {
 
     render() {
         return (
-            <div className="pay">
-                <br></br>
-                <h3 className="payinfo">
-                    Choose any of the payment options totalPrice=
-                    {this.props.totalPrice}
-                </h3>
-                <br></br>
-                <div className="paybutton">
-                    {" "}
-                    <PayPalButton
-                        createOrder={(data, actions) =>
-                            this.createOrder(data, actions)
-                        }
-                        onApprove={(data, actions) =>
-                            this.onApprove(data, actions)
-                        }
-                    />
-                </div>
-                <footer className="footerWelcome">
-                    <p>
-                        © Copyright 2022 by Meghana Pulivarthi. All Rights
-                        Reserved.
+            <>
+                <div className="pay">
+                    <br></br>
+                    <h3 className="payinfo">
+                        Choose any of the payment options
+                    </h3>
+                    <br></br>
+                    <p className="cartinfo">
+                        Your cart value is - {this.props.totalPrice} €
                     </p>
-                </footer>
-            </div>
+                    <br></br>
+                    <div className="paybutton">
+                        {" "}
+                        <PayPalButton
+                            createOrder={(data, actions) =>
+                                this.createOrder(data, actions)
+                            }
+                            onApprove={(data, actions) =>
+                                this.onApprove(data, actions)
+                            }
+                        />
+                    </div>
+                </div>
+                <div className="footerdiv">
+                    <footer className="footerWelcome">
+                        <p>
+                            © Copyright 2022 by Meghana Pulivarthi. All Rights
+                            Reserved.
+                        </p>
+                    </footer>
+                </div>
+            </>
         );
     }
 }

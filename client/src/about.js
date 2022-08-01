@@ -18,11 +18,14 @@ export default function About() {
             <div id="aboutclick">
                 <Link to="/find">Proceed to shop.&nbsp;</Link>
             </div>
-            <footer className="footerWelcome">
-                <p>
-                    © Copyright 2022 by Meghana Pulivarthi. All Rights Reserved.
-                </p>
-            </footer>
+            <div className="footerabout">
+                <footer className="footerWelcome">
+                    <p>
+                        © Copyright 2022 by Meghana Pulivarthi. All Rights
+                        Reserved.
+                    </p>
+                </footer>
+            </div>
         </>
     );
 }

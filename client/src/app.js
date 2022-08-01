@@ -51,6 +51,12 @@ export default class App extends Component {
                         </Route>
                     </Switch>
                 </BrowserRouter>
+                    {/* <footer className="footerWelcome">
+                        <p>
+                            © Copyright 2022 by Meghana Pulivarthi. All Rights
+                            Reserved.
+                        </p>
+                    </footer> */}
             </>
         );
     }

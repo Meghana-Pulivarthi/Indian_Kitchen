@@ -75,11 +75,12 @@ const Productslist = ({ setTotalPrice }) => {
             </Route> */}
 
             <br></br>
-            <footer className="footerWelcome">
-                <p>
-                    © Copyright 2022 by Meghana Pulivarthi. All Rights Reserved.
-                </p>
-            </footer>
+                <footer className="footerWelcome">
+                    <p>
+                        © Copyright 2022 by Meghana Pulivarthi. All Rights
+                        Reserved.
+                    </p>
+                </footer>
         </div>
     );
 };
